@@ -4,17 +4,17 @@ import HeroCardCarousel from "./HeroCardCarousel";
 
 const collectionBoxes = [
   { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
-  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
-  { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
-  { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
-  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
-  { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
-  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
-  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
-  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
-  { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
   { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
+  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
+  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
   { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
+  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
+  { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
+  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
+  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
+  { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
+  { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
+  { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
 ];
 
 export default function Home() {
