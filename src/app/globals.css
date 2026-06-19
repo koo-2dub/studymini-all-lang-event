@@ -271,18 +271,18 @@ body {
 
 .section-sticky-copy-text {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  gap: 0.22em;
-  font-size: clamp(72px, 8vw, 128px);
+  gap: clamp(18px, 1.8vw, 30px);
+  font-size: clamp(72px, 7.7vw, 128px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.07em;
   color: #fff;
 }
 
-.section-sticky-copy-prefix::first-letter {
-  color: #cfe3ff;
+.section-sticky-copy-number-image {
+  flex: 0 0 auto;
 }
 
 .section-sticky-copy-word-wrap {

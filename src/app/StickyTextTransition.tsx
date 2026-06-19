@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
@@ -44,8 +45,8 @@ export default function StickyTextTransition() {
   }, []);
 
   const transitionStyle = useMemo(() => {
-    const languageOut = fadeRange(progress, 0.24, 0.42);
-    const worldIn = fadeRange(progress, 0.38, 0.56);
+    const languageOut = fadeRange(progress, 0.18, 0.34);
+    const worldIn = fadeRange(progress, 0.3, 0.46);
 
     return {
       "--language-opacity": 1 - languageOut,
@@ -59,7 +60,13 @@ export default function StickyTextTransition() {
     <section ref={wrapperRef} className="section-sticky-copy" style={transitionStyle}>
       <div className="section-sticky-copy-inner">
         <p className="section-sticky-copy-text" aria-live="polite">
-          <span className="section-sticky-copy-prefix">12개의</span>
+          <Image
+            src="/assets/all-language/section-4-5-num.png"
+            alt="12개의"
+            width={452}
+            height={120}
+            className="section-sticky-copy-number-image h-auto w-[452px] max-w-[54vw]"
+          />
           <span className="section-sticky-copy-word-wrap" aria-hidden="true">
             <span className="section-sticky-copy-word section-sticky-copy-word-language">언어</span>
             <span className="section-sticky-copy-word section-sticky-copy-word-world">세계</span>
