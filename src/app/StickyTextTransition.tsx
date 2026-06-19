@@ -66,15 +66,15 @@ export default function StickyTextTransition() {
         <p className="section-sticky-copy-text" aria-live="polite">
           <Image
             src="/assets/all-language/section-4-5-num.png"
-            alt="12개의"
-            width={452}
+            alt="12개"
+            width={360}
             height={120}
             priority
-            className="section-sticky-copy-number-image h-auto w-[452px] max-w-[54vw]"
+            className="section-sticky-copy-number-image h-auto w-[360px] max-w-[38vw]"
           />
           <span className="section-sticky-copy-word-wrap" aria-hidden="true">
-            <span className="section-sticky-copy-word section-sticky-copy-word-language" style={languageStyle}>언어</span>
-            <span className="section-sticky-copy-word section-sticky-copy-word-world" style={worldStyle}>세계</span>
+            <span className="section-sticky-copy-word section-sticky-copy-word-language" style={languageStyle}>의 언어</span>
+            <span className="section-sticky-copy-word section-sticky-copy-word-world" style={worldStyle}>의 세계</span>
           </span>
           <span className="sr-only">12개의 언어, 12개의 세계</span>
         </p>
