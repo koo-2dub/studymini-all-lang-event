@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <StickyTextTransition />
+      <StickyTextTransition numberSrc="/assets/all-language/section-4-5-num.png" />
 
       <section className="section-starter-pack bg-black text-center">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center px-6">
