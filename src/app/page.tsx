@@ -1,15 +1,8 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 
-const languageCards = [
-  { label: "中文", tone: "muted" },
-  { label: "にほんご" },
-  { label: "Deutsch" },
-  { label: "English", featured: true },
-  { label: "Español" },
-  { label: "Français" },
-  { label: "Italiano", tone: "muted" },
-];
+const languageCards = ["中文", "にほんご", "Deutsch", "English", "Español", "Français", "Italiano"];
+const loopingLanguageCards = [...languageCards, ...languageCards];
 
 export default function Home() {
   return (
@@ -38,16 +31,18 @@ export default function Home() {
             className="hero-earth hero-earth-back absolute left-1/2 top-0 z-10 h-auto w-[752px] max-w-none -translate-x-1/2"
           />
 
-          <div className="hero-card-track absolute left-1/2 top-0 z-20 h-[252px] w-[1140px] -translate-x-1/2" aria-hidden="true">
-            {languageCards.map((card, index) => (
-              <div
-                key={card.label}
-                className={`hero-language-card ${card.featured ? "hero-language-card-featured" : ""} ${card.tone === "muted" ? "hero-language-card-muted" : ""}`}
-                style={{ "--card-index": index } as CSSProperties}
-              >
-                <span>{card.label}</span>
-              </div>
-            ))}
+          <div className="hero-card-viewport absolute left-1/2 top-[61px] z-20 h-[252px] w-[1140px] -translate-x-1/2" aria-hidden="true">
+            <div className="hero-card-track">
+              {loopingLanguageCards.map((label, index) => (
+                <div
+                  key={`${label}-${index}`}
+                  className="hero-language-card"
+                  style={{ "--card-index": index % languageCards.length } as CSSProperties}
+                >
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <Image
