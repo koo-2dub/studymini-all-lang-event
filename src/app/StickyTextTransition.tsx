@@ -45,8 +45,8 @@ export default function StickyTextTransition() {
   }, []);
 
   const transitionStyle = useMemo(() => {
-    const languageOut = fadeRange(progress, 0.18, 0.34);
-    const worldIn = fadeRange(progress, 0.3, 0.46);
+    const languageOut = fadeRange(progress, 0.3, 0.44);
+    const worldIn = fadeRange(progress, 0.42, 0.56);
 
     return {
       "--language-opacity": 1 - languageOut,
@@ -65,6 +65,7 @@ export default function StickyTextTransition() {
             alt="12개의"
             width={452}
             height={120}
+            priority
             className="section-sticky-copy-number-image h-auto w-[452px] max-w-[54vw]"
           />
           <span className="section-sticky-copy-word-wrap" aria-hidden="true">
