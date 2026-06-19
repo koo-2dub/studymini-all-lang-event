@@ -1,65 +1,162 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
+import HeroCardCarousel from "./HeroCardCarousel";
+import StickyTextTransition from "./StickyTextTransition";
+
+const collectionBoxes = [
+  { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
+  { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
+  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
+  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
+  { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
+  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
+  { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
+  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
+  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
+  { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
+  { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
+  { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
+];
+
+const starterCards = [
+  "starter-img.png",
+  "starter-img-1.png",
+  "starter-img-2.png",
+  "starter-img-3.png",
+  "starter-img-4.png",
+  "starter-img-5.png",
+  "starter-img-6.png",
+  "starter-img-7.png",
+  "starter-img-8.png",
+  "starter-img-9.png",
+  "starter-img-10.png",
+  "starter-img-11.png",
+];
+
+const loopingStarterCards = [...starterCards, ...starterCards];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="overflow-hidden bg-black text-white">
+      <section
+        aria-labelledby="hero-title"
+        className="relative mx-auto flex min-h-[820px] w-full max-w-[1920px] flex-col items-center bg-black px-6 pt-[138px] text-center"
+      >
+        <p className="text-[32px] font-medium leading-none tracking-[-0.035em] text-white md:text-[38px]">
+          단 하나의 마스터피스
+        </p>
+        <h1
+          id="hero-title"
+          className="mt-[28px] text-[72px] font-extrabold leading-none tracking-[-0.055em] text-[#dcecff] md:text-[88px] lg:text-[96px]"
+        >
+          모두의 언어
+        </h1>
+
+        <div className="hero-stage relative mt-[87px] h-[430px] w-full max-w-[1140px] overflow-hidden">
+          <Image
+            src="/assets/all-language/hero-back.png"
+            alt="별이 보이는 우주와 지구 배경"
+            width={752}
+            height={423}
+            priority
+            className="hero-earth hero-earth-back absolute left-1/2 top-0 z-10 h-auto w-[752px] max-w-none -translate-x-1/2"
+          />
+
+          <HeroCardCarousel />
+
+          <Image
+            src="/assets/all-language/hero-front.png"
+            alt="언어 카드 앞쪽으로 떠오른 지구의 푸른 빛"
+            width={752}
+            height={423}
+            priority
+            className="hero-earth absolute left-1/2 top-0 z-30 h-auto w-[752px] max-w-none -translate-x-1/2"
+          />
+          <Image
+            src="/assets/all-language/hero-gra-shadow.png"
+            alt=""
+            fill
+            priority
+            sizes="1140px"
+            className="pointer-events-none z-40 object-contain"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="section-weekly-offer flex h-[196px] w-full items-center justify-center px-6 text-center">
+        <h2 className="text-[34px] font-extrabold leading-tight tracking-[-0.04em] text-white md:text-[44px]">
+          일주일 동안만 선보입니다
+        </h2>
+      </section>
+
+      <section className="section-collection relative overflow-hidden bg-black px-6 text-center">
+        <p className="text-[26px] font-medium tracking-[-0.035em] text-[#a9c8ef] md:text-[32px]">
+          영어부터 아랍어까지
+        </p>
+        <h2 className="mt-7 whitespace-pre-line text-[42px] font-extrabold leading-[1.34] tracking-[-0.055em] text-white md:text-[58px]">
+          {"미니학습지가 만든 12개 언어를\n하나의 컬렉션에 담다"}
+        </h2>
+
+        <div className="section-collection-stage relative mx-auto mt-[74px] h-[760px] w-full max-w-[900px]">
+          <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
+            {collectionBoxes.map((box, index) => (
+              <Image
+                key={box.src}
+                src={`/assets/all-language/${box.src}`}
+                alt={box.alt}
+                width={340}
+                height={358}
+                className={`section-collection-box absolute h-auto max-w-none ${box.className}`}
+                style={{ "--box-delay": `${index * 0.42}s` } as CSSProperties}
+              />
+            ))}
+          </div>
+          <Image
+            src="/assets/all-language/bottom-box.png"
+            alt="미니학습지 로고가 있는 컬렉션 베이스 박스"
+            width={620}
+            height={259}
+            className="absolute bottom-0 left-1/2 z-20 h-auto w-[620px] max-w-[92vw] -translate-x-1/2"
+          />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <StickyTextTransition numberSrc="/assets/all-language/section-4-5-num.png" />
+
+      <section className="section-starter-pack bg-black text-center">
+        <div className="mx-auto flex max-w-[1280px] flex-col items-center px-6">
+          <Image
+            src="/assets/all-language/section6-number-12.png"
+            alt="12"
+            width={210}
+            height={128}
+            className="section-starter-pack-number-image h-auto w-[210px] max-w-[34vw]"
+          />
+          <Image
+            src="/assets/all-language/section6-description.png"
+            alt="아직 시작하지 않은 세계의 설렘까지 담은 미니학습지 스타터팩 풀 세트"
+            width={620}
+            height={92}
+            className="section-starter-pack-description-image h-auto w-[620px] max-w-[82vw]"
+          />
+        </div>
+
+        <div className="section-starter-marquee">
+          <div className="section-starter-marquee-track">
+            {loopingStarterCards.map((card, index) => (
+              <article key={`${card}-${index}`} className="section-starter-card">
+                <Image
+                  src={`/assets/all-language/${card}`}
+                  alt="미니학습지 스타터팩 이미지"
+                  width={267}
+                  height={200}
+                  className="h-full w-full object-cover"
+                />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
