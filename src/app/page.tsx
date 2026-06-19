@@ -19,18 +19,18 @@ const collectionBoxes = [
 ];
 
 const starterCards = [
-  { src: "starter-img.png", label: "스페인어", flag: "🇪🇸" },
-  { src: "starter-img-1.png", label: "일본어", flag: "🇯🇵" },
-  { src: "starter-img-2.png", label: "중국어", flag: "🇨🇳" },
-  { src: "starter-img-3.png", label: "독일어", flag: "🇩🇪" },
-  { src: "starter-img-4.png", label: "베트남어", flag: "🇻🇳" },
-  { src: "starter-img-5.png", label: "이탈리아어", flag: "🇮🇹" },
-  { src: "starter-img-6.png", label: "포르투갈어", flag: "🇧🇷" },
-  { src: "starter-img-7.png", label: "프랑스어", flag: "🇫🇷" },
-  { src: "starter-img-8.png", label: "러시아어", flag: "🇷🇺" },
-  { src: "starter-img-9.png", label: "아랍어", flag: "🇸🇦" },
-  { src: "starter-img-10.png", label: "인도네시아어", flag: "🇮🇩" },
-  { src: "starter-img-11.png", label: "영어", flag: "🇺🇸" },
+  "starter-img.png",
+  "starter-img-1.png",
+  "starter-img-2.png",
+  "starter-img-3.png",
+  "starter-img-4.png",
+  "starter-img-5.png",
+  "starter-img-6.png",
+  "starter-img-7.png",
+  "starter-img-8.png",
+  "starter-img-9.png",
+  "starter-img-10.png",
+  "starter-img-11.png",
 ];
 
 const loopingStarterCards = [...starterCards, ...starterCards];
@@ -125,27 +125,33 @@ export default function Home() {
 
       <section className="section-starter-pack bg-black text-center">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center px-6">
-          <p className="section-starter-pack-number">12</p>
-          <h2 className="section-starter-pack-copy whitespace-pre-line text-[28px] font-medium leading-[1.55] tracking-[-0.045em] text-white md:text-[34px]">
-            {"아직 시작하지 않은 세계의 설렘까지 담은\n미니학습지 스타터팩 풀 세트"}
-          </h2>
+          <Image
+            src="/assets/all-language/section6-number-12.png"
+            alt="12"
+            width={210}
+            height={128}
+            className="section-starter-pack-number-image h-auto w-[210px] max-w-[34vw]"
+          />
+          <Image
+            src="/assets/all-language/section6-description.png"
+            alt="아직 시작하지 않은 세계의 설렘까지 담은 미니학습지 스타터팩 풀 세트"
+            width={620}
+            height={92}
+            className="section-starter-pack-description-image h-auto w-[620px] max-w-[82vw]"
+          />
         </div>
 
-        <div className="section-starter-marquee mt-[92px]">
+        <div className="section-starter-marquee">
           <div className="section-starter-marquee-track">
             {loopingStarterCards.map((card, index) => (
-              <article key={`${card.src}-${index}`} className="section-starter-card">
+              <article key={`${card}-${index}`} className="section-starter-card">
                 <Image
-                  src={`/assets/all-language/${card.src}`}
-                  alt={`${card.label} 스타터팩 이미지`}
+                  src={`/assets/all-language/${card}`}
+                  alt="미니학습지 스타터팩 이미지"
                   width={267}
                   height={200}
                   className="h-full w-full object-cover"
                 />
-                <div className="section-starter-card-label">
-                  <span aria-hidden="true">{card.flag}</span>
-                  <span>{card.label}</span>
-                </div>
               </article>
             ))}
           </div>
