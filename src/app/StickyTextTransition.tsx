@@ -44,20 +44,24 @@ export default function StickyTextTransition() {
     };
   }, []);
 
-  const transitionStyle = useMemo(() => {
-    const languageOut = fadeRange(progress, 0.3, 0.44);
-    const worldIn = fadeRange(progress, 0.42, 0.56);
+  const { languageStyle, worldStyle } = useMemo(() => {
+    const languageOut = fadeRange(progress, 0.12, 0.24);
+    const worldIn = fadeRange(progress, 0.2, 0.32);
 
     return {
-      "--language-opacity": 1 - languageOut,
-      "--language-y": `${languageOut * -36}px`,
-      "--world-opacity": worldIn,
-      "--world-y": `${(1 - worldIn) * 36}px`,
-    } as CSSProperties;
+      languageStyle: {
+        opacity: 1 - languageOut,
+        transform: `translate3d(0, ${languageOut * -36}px, 0)`,
+      } as CSSProperties,
+      worldStyle: {
+        opacity: worldIn,
+        transform: `translate3d(0, ${(1 - worldIn) * 36}px, 0)`,
+      } as CSSProperties,
+    };
   }, [progress]);
 
   return (
-    <section ref={wrapperRef} className="section-sticky-copy" style={transitionStyle}>
+    <section ref={wrapperRef} className="section-sticky-copy">
       <div className="section-sticky-copy-inner">
         <p className="section-sticky-copy-text" aria-live="polite">
           <Image
@@ -69,8 +73,8 @@ export default function StickyTextTransition() {
             className="section-sticky-copy-number-image h-auto w-[452px] max-w-[54vw]"
           />
           <span className="section-sticky-copy-word-wrap" aria-hidden="true">
-            <span className="section-sticky-copy-word section-sticky-copy-word-language">언어</span>
-            <span className="section-sticky-copy-word section-sticky-copy-word-world">세계</span>
+            <span className="section-sticky-copy-word section-sticky-copy-word-language" style={languageStyle}>언어</span>
+            <span className="section-sticky-copy-word section-sticky-copy-word-world" style={worldStyle}>세계</span>
           </span>
           <span className="sr-only">12개의 언어, 12개의 세계</span>
         </p>
