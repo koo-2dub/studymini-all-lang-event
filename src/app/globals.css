@@ -256,7 +256,7 @@ body {
 
 .section-sticky-copy {
   position: relative;
-  height: 320vh;
+  height: 360vh;
   background: #000;
 }
 
@@ -299,13 +299,11 @@ body {
 }
 
 .section-sticky-copy-word-language {
-  opacity: var(--language-opacity);
-  transform: translate3d(0, var(--language-y), 0);
+  opacity: 1;
 }
 
 .section-sticky-copy-word-world {
-  opacity: var(--world-opacity);
-  transform: translate3d(0, var(--world-y), 0);
+  opacity: 0;
 }
 
 .section-starter-pack {
