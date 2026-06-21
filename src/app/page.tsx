@@ -4,6 +4,8 @@ import HeroCardCarousel from "./HeroCardCarousel";
 import StickyTextTransition from "./StickyTextTransition";
 import Section7 from "./Section7";
 import Section8 from "./Section8";
+import Section9 from "./Section9";
+import Section10 from "./Section10";
 
 const collectionBoxes = [
   { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
@@ -162,6 +164,8 @@ export default function Home() {
 
       <Section7 />
       <Section8 />
+      <Section9 />
+      <Section10 />
     </main>
   );
 }
