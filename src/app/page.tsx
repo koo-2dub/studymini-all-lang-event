@@ -1,7 +1,7 @@
-import type { CSSProperties } from "react";
 import Image from "next/image";
 import HeroCardCarousel from "./HeroCardCarousel";
 import StickyTextTransition from "./StickyTextTransition";
+import SectionCollectionStage from "./SectionCollectionStage";
 import Section7 from "./Section7";
 import Section8 from "./Section8";
 import Section9 from "./Section9";
@@ -9,21 +9,6 @@ import Section10 from "./Section10";
 import Section11 from "./Section11";
 import Section12 from "./Section12";
 import Section13 from "./Section13";
-
-const collectionBoxes = [
-  { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
-  { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
-  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
-  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
-  { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
-  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
-  { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
-  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
-  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
-  { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
-  { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
-  { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
-];
 
 const starterCards = [
   "starter-img.png",
@@ -47,19 +32,21 @@ export default function Home() {
     <main className="overflow-hidden bg-black text-white">
       <section
         aria-labelledby="hero-title"
-        className="relative mx-auto flex min-h-[820px] w-full max-w-[1920px] flex-col items-center bg-black px-6 pt-[138px] text-center"
+        className="hero-section relative mx-auto min-h-[820px] max-w-[1920px] bg-black text-center"
       >
-        <p className="text-[32px] font-medium leading-none tracking-[-0.035em] text-white md:text-[38px]">
-          단 하나의 마스터피스
-        </p>
-        <h1
-          id="hero-title"
-          className="mt-[28px] text-[72px] font-extrabold leading-none tracking-[-0.055em] text-[#dcecff] md:text-[88px] lg:text-[96px]"
-        >
-          모두의 언어
-        </h1>
+        <div className="hero-copy">
+          <p className="text-[32px] font-medium leading-none tracking-[-0.035em] text-white md:text-[38px]">
+            단 하나의 마스터피스
+          </p>
+          <h1
+            id="hero-title"
+            className="hero-title mt-[28px] text-[72px] font-extrabold leading-none tracking-[-0.055em] md:text-[88px] lg:text-[96px]"
+          >
+            모두의 언어
+          </h1>
+        </div>
 
-        <div className="hero-stage relative mt-[87px] h-[430px] w-full max-w-[1140px] overflow-hidden">
+        <div className="hero-stage relative h-[430px] w-full max-w-[1140px] overflow-hidden">
           <Image
             src="/assets/all-language/hero-back.png"
             alt="별이 보이는 우주와 지구 배경"
@@ -96,36 +83,15 @@ export default function Home() {
         </h2>
       </section>
 
-      <section className="section-collection relative overflow-hidden bg-black px-6 text-center">
-        <p className="text-[26px] font-medium tracking-[-0.035em] text-[#a9c8ef] md:text-[32px]">
-          영어부터 아랍어까지
-        </p>
-        <h2 className="mt-7 whitespace-pre-line text-[42px] font-extrabold leading-[1.34] tracking-[-0.055em] text-white md:text-[58px]">
-          {"미니학습지가 만든 12개 언어를\n하나의 컬렉션에 담다"}
-        </h2>
-
-        <div className="section-collection-stage relative mx-auto mt-[74px] h-[760px] w-full max-w-[900px]">
-          <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
-            {collectionBoxes.map((box, index) => (
-              <Image
-                key={box.src}
-                src={`/assets/all-language/${box.src}`}
-                alt={box.alt}
-                width={340}
-                height={358}
-                className={`section-collection-box absolute h-auto max-w-none ${box.className}`}
-                style={{ "--box-delay": `${index * 0.42}s` } as CSSProperties}
-              />
-            ))}
-          </div>
-          <Image
-            src="/assets/all-language/bottom-box.png"
-            alt="미니학습지 로고가 있는 컬렉션 베이스 박스"
-            width={620}
-            height={259}
-            className="absolute bottom-0 left-1/2 z-20 h-auto w-[620px] max-w-[92vw] -translate-x-1/2"
-          />
+      <section className="section-collection relative overflow-hidden bg-black text-center">
+        <div className="section-collection-copy">
+          <p className="section-collection-kicker">영어부터 아랍어까지</p>
+          <h2 className="section-collection-title">
+            {"미니학습지가 만든 12개 언어를\n하나의 컬렉션에 담다"}
+          </h2>
         </div>
+
+        <SectionCollectionStage />
       </section>
 
       <StickyTextTransition numberSrc="/assets/all-language/section-4-5-num.png" />
