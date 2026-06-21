@@ -7,6 +7,8 @@ import Section8 from "./Section8";
 import Section9 from "./Section9";
 import Section10 from "./Section10";
 import Section11 from "./Section11";
+import Section12 from "./Section12";
+import Section13 from "./Section13";
 
 const collectionBoxes = [
   { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
@@ -168,6 +170,8 @@ export default function Home() {
       <Section9 />
       <Section10 />
       <Section11 />
+      <Section12 />
+      <Section13 />
     </main>
   );
 }
