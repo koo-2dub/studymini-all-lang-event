@@ -1201,7 +1201,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  padding: 150px 24px 120px;
+  padding: 150px 24px 140px;
   background: #000;
   color: #fff;
   text-align: center;
@@ -1214,68 +1214,107 @@ body {
   background-clip: text;
   color: transparent;
   font-family: Pretendard, Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 80px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 135%;
-  letter-spacing: -0.1px;
+  line-height: 120%;
+  letter-spacing: -0.16px;
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.section11-title-break {
+  display: none;
+}
+
 .section11-price-graph {
-  width: 100%;
-  max-width: 1000px;
+  width: 800px;
+  max-width: 100%;
   height: auto;
   margin-top: 82px;
 }
 
+.section11-card-title {
+  margin: 96px 0 0;
+  color: var(--white, #fff);
+  font-family: Pretendard, Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: -0.1px;
+  text-align: center;
+}
+
 .section11-price-card {
-  width: 100%;
-  max-width: 520px;
+  display: flex;
+  width: 520px;
+  max-width: 100%;
   height: auto;
-  margin-top: 96px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 46px;
 }
 
 @media (max-width: 900px) {
   .section11 {
-    padding: 112px 24px 94px;
+    padding: 112px 24px 110.46px;
   }
 
   .section11-title {
-    font-size: 42px;
-    letter-spacing: -0.084px;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: -0.12px;
   }
 
   .section11-price-graph {
-    max-width: 700px;
+    width: 680px;
     margin-top: 72px;
   }
 
-  .section11-price-card {
-    max-width: 480px;
+  .section11-card-title {
     margin-top: 90px;
+    font-size: 42px;
+    line-height: 135%;
+    letter-spacing: -0.084px;
+  }
+
+  .section11-price-card {
+    width: 460px;
+    margin-top: 44px;
   }
 }
 
 @media (max-width: 430px) {
   .section11 {
-    padding: 86px 16px 72px;
+    padding: 86px 0 80.11px;
   }
 
   .section11-title {
-    max-width: 250px;
-    font-size: 32px;
-    letter-spacing: -0.064px;
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: -0.08px;
+  }
+
+  .section11-title-break {
+    display: inline;
   }
 
   .section11-price-graph {
-    max-width: 320px;
+    width: 375px;
     margin-top: 52px;
   }
 
-  .section11-price-card {
-    max-width: 320px;
+  .section11-card-title {
     margin-top: 66px;
+    font-size: 24px;
+    line-height: 135%;
+    letter-spacing: -0.048px;
+  }
+
+  .section11-price-card {
+    width: 310px;
+    margin-top: 34px;
   }
 }

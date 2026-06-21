@@ -4,7 +4,7 @@ export default function Section11() {
   return (
     <section className="section11" aria-labelledby="section11-title">
       <h2 id="section11-title" className="section11-title">
-        할인에 할인을 더했다
+        할인에<span className="section11-title-break"><br /></span> 할인을<span className="section11-title-break"><br /></span> 더했다
       </h2>
 
       <Image
@@ -14,6 +14,10 @@ export default function Section11() {
         height={542}
         className="section11-price-graph"
       />
+
+      <h3 className="section11-card-title">
+        단 일주일만<br />특별 한정가로 드립니다
+      </h3>
 
       <Image
         src="/assets/all-language/section11-price-card.png"
