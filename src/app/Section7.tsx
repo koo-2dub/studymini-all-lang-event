@@ -9,8 +9,8 @@ export default function Section7() {
             src="/assets/all-language/woman-book.png"
             alt=""
             fill
-            sizes="(max-width: 900px) 100vw, 704px"
-            className="object-cover object-[center_right] md:object-[center_right]"
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 57vw, 730px"
+            className="object-cover object-[center_right]"
           />
         </div>
 
