@@ -11,18 +11,18 @@ import Section12 from "./Section12";
 import Section13 from "./Section13";
 
 const collectionBoxes = [
-  { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
-  { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
-  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
-  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
-  { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
-  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
   { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
-  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
-  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
+  { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
   { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
+  { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
   { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
+  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
+  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
+  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
+  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
   { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
+  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
+  { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
 ];
 
 const starterCards = [
@@ -47,19 +47,21 @@ export default function Home() {
     <main className="overflow-hidden bg-black text-white">
       <section
         aria-labelledby="hero-title"
-        className="relative mx-auto flex min-h-[820px] w-full max-w-[1920px] flex-col items-center bg-black px-6 pt-[138px] text-center"
+        className="hero-section relative mx-auto min-h-[820px] max-w-[1920px] bg-black text-center"
       >
-        <p className="text-[32px] font-medium leading-none tracking-[-0.035em] text-white md:text-[38px]">
-          단 하나의 마스터피스
-        </p>
-        <h1
-          id="hero-title"
-          className="mt-[28px] text-[72px] font-extrabold leading-none tracking-[-0.055em] text-[#dcecff] md:text-[88px] lg:text-[96px]"
-        >
-          모두의 언어
-        </h1>
+        <div className="hero-copy">
+          <p className="text-[32px] font-medium leading-none tracking-[-0.035em] text-white md:text-[38px]">
+            단 하나의 마스터피스
+          </p>
+          <h1
+            id="hero-title"
+            className="hero-title mt-[28px] text-[72px] font-extrabold leading-none tracking-[-0.055em] md:text-[88px] lg:text-[96px]"
+          >
+            모두의 언어
+          </h1>
+        </div>
 
-        <div className="hero-stage relative mt-[87px] h-[430px] w-full max-w-[1140px] overflow-hidden">
+        <div className="hero-stage relative h-[430px] w-full max-w-[1140px] overflow-hidden">
           <Image
             src="/assets/all-language/hero-back.png"
             alt="별이 보이는 우주와 지구 배경"
