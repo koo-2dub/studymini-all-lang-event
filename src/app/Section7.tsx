@@ -3,20 +3,20 @@ import Image from "next/image";
 export default function Section7() {
   return (
     <section className="section-language-library" aria-labelledby="section-language-library-title">
-      <div className="section-language-library-wrap">
-        <div className="section-language-library-image" aria-hidden="true">
-          <Image
-            src="/assets/all-language/woman-book.png"
-            alt=""
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 57vw, 730px"
-            className="object-cover object-[center_right]"
-          />
-        </div>
+      <div className="section-language-library-image" aria-hidden="true">
+        <Image
+          src="/assets/all-language/woman-book.png"
+          alt=""
+          fill
+          sizes="(max-width: 640px) 100vw, 58vw"
+          className="object-cover object-[center_right]"
+        />
+      </div>
 
-        <div className="section-language-library-gradient" aria-hidden="true" />
-        <div className="section-language-library-vignette" aria-hidden="true" />
+      <div className="section-language-library-gradient" aria-hidden="true" />
+      <div className="section-language-library-vignette" aria-hidden="true" />
 
+      <div className="section-language-library-content-wrap">
         <div className="section-language-library-content">
           <h2 id="section-language-library-title">
             많이 팔리는 언어만 만들었다면,

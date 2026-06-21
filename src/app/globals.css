@@ -392,20 +392,12 @@ body {
 }
 .section-language-library {
   position: relative;
+  isolation: isolate;
+  min-height: 100vh;
   overflow: hidden;
   background:
     linear-gradient(90deg, #17365f 0%, #0b1d36 43%, #020913 100%);
   color: #fff;
-}
-
-.section-language-library-wrap {
-  position: relative;
-  isolation: isolate;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 1280px;
-  margin-inline: auto;
-  overflow: visible;
 }
 
 .section-language-library-image {
@@ -414,7 +406,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 0;
-  width: 57%;
+  width: 58%;
 }
 
 .section-language-library-gradient,
@@ -437,9 +429,16 @@ body {
     linear-gradient(90deg, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.62) 100%);
 }
 
-.section-language-library-content {
+.section-language-library-content-wrap {
   position: relative;
   z-index: 3;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.section-language-library-content {
   display: flex;
   min-height: 100vh;
   width: min(560px, calc(100% - 80px));
@@ -481,12 +480,6 @@ body {
   color: rgba(255, 255, 255, 0.94);
 }
 
-@media (min-width: 1440px) {
-  .section-language-library-wrap {
-    max-width: 1280px;
-  }
-}
-
 @media (max-width: 900px) and (min-width: 641px) {
   .section-language-library-content {
     width: min(420px, calc(100% - 90px));
@@ -512,16 +505,8 @@ body {
 
 @media (max-width: 640px) {
   .section-language-library {
-    background: linear-gradient(180deg, #06101f 0%, #0a1c34 46%, #183961 100%);
-  }
-
-  .section-language-library-wrap {
-    display: flex;
     min-height: auto;
-    max-width: none;
-    flex-direction: column;
-    overflow: hidden;
-    background: transparent;
+    background: linear-gradient(180deg, #06101f 0%, #0a1c34 46%, #183961 100%);
   }
 
   .section-language-library-image {
@@ -531,7 +516,6 @@ body {
     bottom: auto;
     width: 100%;
     height: clamp(320px, 89vw, 390px);
-    flex: 0 0 auto;
   }
 
   .section-language-library-image img {
@@ -553,6 +537,11 @@ body {
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, 0) 37%, rgba(0, 0, 0, 0.42) 48%, rgba(0, 0, 0, 0) 68%),
       radial-gradient(ellipse at 100% 20%, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.08) 42%, rgba(0, 0, 0, 0) 70%);
+  }
+
+  .section-language-library-content-wrap {
+    min-height: auto;
+    max-width: none;
   }
 
   .section-language-library-content {
