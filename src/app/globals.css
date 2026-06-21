@@ -854,12 +854,12 @@ body {
 
 @media (max-width: 640px) {
   .section8 {
-    padding: 88px 0 78px;
+    padding: 88px 25px 78px;
   }
 
   .section8-inner {
-    width: 325px;
-    max-width: calc(100vw - 50px);
+    width: 100%;
+    max-width: none;
   }
 
   .section8-title {
