@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import Image from "next/image";
 import HeroCardCarousel from "./HeroCardCarousel";
 import StickyTextTransition from "./StickyTextTransition";
+import Section7 from "./Section7";
 
 const collectionBoxes = [
   { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
@@ -157,6 +158,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section7 />
     </main>
   );
 }
