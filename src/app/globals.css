@@ -218,14 +218,13 @@ body {
   z-index: var(--box-z);
   width: var(--box-width);
   opacity: 0;
-  transform: translateY(-220px) rotate(calc(var(--box-rotate) - 10deg));
+  transform: translateY(-180px) rotate(calc(var(--box-rotate) - 10deg)) scale(0.96);
+  animation: collection-box-drop-loop 7.2s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--box-index) * 0.6s) infinite both;
   will-change: transform, opacity;
 }
 
-.is-collection-visible .section-collection-box {
-  animation:
-    collection-box-waterfall 0.78s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--box-index) * 0.09s) forwards,
-    collection-box-float 8.5s ease-in-out calc((var(--box-index) * 0.09s) + 0.78s) infinite;
+.section-collection-bottom-box {
+  z-index: 40;
 }
 
 .section-collection-box-id {
@@ -424,20 +423,29 @@ body {
   }
 }
 
-@keyframes collection-box-waterfall {
-  from {
+@keyframes collection-box-drop-loop {
+  0% {
     opacity: 0;
-    transform: translateY(-220px) rotate(calc(var(--box-rotate) - 10deg));
+    transform: translateY(-180px) rotate(calc(var(--box-rotate) - 10deg)) scale(0.96);
   }
 
-  68% {
+  8% {
     opacity: 1;
-    transform: translateY(12px) rotate(calc(var(--box-rotate) + 1deg));
   }
 
-  to {
+  24% {
     opacity: 1;
-    transform: translateY(0) rotate(var(--box-rotate));
+    transform: translateY(0) rotate(var(--box-rotate)) scale(1);
+  }
+
+  38% {
+    opacity: 0;
+    transform: translateY(150px) rotate(var(--box-rotate)) scale(0.92);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(150px) rotate(var(--box-rotate)) scale(0.92);
   }
 }
 

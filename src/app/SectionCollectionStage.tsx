@@ -1,7 +1,6 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const collectionBoxes = [
@@ -20,39 +19,8 @@ const collectionBoxes = [
 ];
 
 export default function SectionCollectionStage() {
-  const stageRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const stage = stageRef.current;
-
-    if (!stage || isVisible) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: "0px 0px -10% 0px",
-        threshold: 0.15,
-      },
-    );
-
-    observer.observe(stage);
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
   return (
-    <div
-      ref={stageRef}
-      className={`section-collection-stage relative mx-auto h-[760px] w-full max-w-[900px]${isVisible ? " is-collection-visible" : ""}`}
-    >
+    <div className="section-collection-stage relative mx-auto h-[760px] w-full max-w-[900px]">
       <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
         {collectionBoxes.map((box, index) => (
           <Image
@@ -71,7 +39,7 @@ export default function SectionCollectionStage() {
         alt="미니학습지 로고가 있는 컬렉션 베이스 박스"
         width={620}
         height={259}
-        className="absolute bottom-0 left-1/2 z-20 h-auto w-[620px] max-w-[92vw] -translate-x-1/2"
+        className="section-collection-bottom-box absolute bottom-0 left-1/2 z-20 h-auto w-[620px] max-w-[92vw] -translate-x-1/2"
       />
     </div>
   );
