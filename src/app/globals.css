@@ -1321,7 +1321,7 @@ body {
 
 .section12 {
   display: flex;
-  padding: 160px 320px;
+  padding: 160px 70px;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
@@ -1332,6 +1332,10 @@ body {
   font-family: Pretendard, Arial, Helvetica, sans-serif;
 }
 
+.section12 * {
+  min-width: 0;
+}
+
 .section12-eyebrow,
 .section12-title {
   align-self: stretch;
@@ -1339,6 +1343,8 @@ body {
   color: #fff;
   line-height: 135%;
   text-align: center;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .section12-eyebrow {
@@ -1350,6 +1356,10 @@ body {
 .section12-title {
   font-size: 64px;
   font-weight: 700;
+}
+
+.section12-title span {
+  white-space: nowrap;
 }
 
 .section13 {
@@ -1374,31 +1384,13 @@ body {
 }
 
 .section13-alert-icon {
-  position: relative;
   display: flex;
-  width: 43px;
-  height: 38px;
   align-items: center;
   justify-content: center;
-  color: #252525;
-  font-size: 23px;
-  font-weight: 900;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 43px;
+  font-weight: 400;
   line-height: 1;
-  transform: translateY(1px);
-}
-
-.section13-alert-icon::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: #ffd52e;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-.section13-alert-icon::after {
-  position: relative;
-  z-index: 1;
-  content: "!";
 }
 
 .section13-title {
@@ -1472,9 +1464,7 @@ body {
   }
 
   .section13-alert-icon {
-    width: 36px;
-    height: 32px;
-    font-size: 20px;
+    font-size: 36px;
   }
 
   .section13-title {

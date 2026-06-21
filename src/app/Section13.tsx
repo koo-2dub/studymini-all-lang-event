@@ -39,7 +39,7 @@ export default function Section13() {
     <section className="section13" aria-labelledby="section13-title">
       <div className="section13-inner">
         <div className="section13-header">
-          <div className="section13-alert-icon" aria-hidden="true">!</div>
+          <div className="section13-alert-icon" aria-hidden="true">⚠️</div>
           <h2 id="section13-title" className="section13-title">꼭 확인해 주세요</h2>
         </div>
 
