@@ -1194,3 +1194,88 @@ body {
     line-height: 1.48;
   }
 }
+
+.section11 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 150px 24px 120px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.section11-title {
+  max-width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #a6c9f6 0%, #fff 100%);
+  background-clip: text;
+  color: transparent;
+  font-family: Pretendard, Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: -0.1px;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section11-price-graph {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin-top: 82px;
+}
+
+.section11-price-card {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-top: 96px;
+}
+
+@media (max-width: 900px) {
+  .section11 {
+    padding: 112px 24px 94px;
+  }
+
+  .section11-title {
+    font-size: 42px;
+    letter-spacing: -0.084px;
+  }
+
+  .section11-price-graph {
+    max-width: 700px;
+    margin-top: 72px;
+  }
+
+  .section11-price-card {
+    max-width: 480px;
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 430px) {
+  .section11 {
+    padding: 86px 16px 72px;
+  }
+
+  .section11-title {
+    max-width: 250px;
+    font-size: 32px;
+    letter-spacing: -0.064px;
+  }
+
+  .section11-price-graph {
+    max-width: 320px;
+    margin-top: 52px;
+  }
+
+  .section11-price-card {
+    max-width: 320px;
+    margin-top: 66px;
+  }
+}
