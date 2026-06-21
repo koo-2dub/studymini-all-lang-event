@@ -50,11 +50,9 @@ export default function Section8() {
           <div className="section8-study-cards">
             <article className="section8-study-card">
               <Image src="/assets/all-language/section8-paper.png" alt="종이 학습지" width={435} height={326} />
-              <span>종이 학습지</span>
             </article>
             <article className="section8-study-card">
               <Image src="/assets/all-language/section8-digital.png" alt="디지털 학습지" width={435} height={326} />
-              <span>디지털 학습지</span>
             </article>
           </div>
           <p className="section8-notice">*러시아어 · 인도네시아어 · 아랍어 스타터팩은 디지털 학습지만 제공됩니다.</p>
