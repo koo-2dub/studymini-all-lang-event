@@ -98,15 +98,15 @@ export default function Home() {
         </h2>
       </section>
 
-      <section className="section-collection relative overflow-hidden bg-black px-6 text-center">
-        <p className="text-[26px] font-medium tracking-[-0.035em] text-[#a9c8ef] md:text-[32px]">
-          영어부터 아랍어까지
-        </p>
-        <h2 className="mt-7 whitespace-pre-line text-[42px] font-extrabold leading-[1.34] tracking-[-0.055em] text-white md:text-[58px]">
-          {"미니학습지가 만든 12개 언어를\n하나의 컬렉션에 담다"}
-        </h2>
+      <section className="section-collection relative overflow-hidden bg-black text-center">
+        <div className="section-collection-copy">
+          <p className="section-collection-kicker">영어부터 아랍어까지</p>
+          <h2 className="section-collection-title">
+            {"미니학습지가 만든 12개 언어를\n하나의 컬렉션에 담다"}
+          </h2>
+        </div>
 
-        <div className="section-collection-stage relative mx-auto mt-[74px] h-[760px] w-full max-w-[900px]">
+        <div className="section-collection-stage relative mx-auto h-[760px] w-full max-w-[900px]">
           <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
             {collectionBoxes.map((box, index) => (
               <Image
@@ -116,7 +116,7 @@ export default function Home() {
                 width={340}
                 height={358}
                 className={`section-collection-box absolute h-auto max-w-none ${box.className}`}
-                style={{ "--box-delay": `${index * 0.42}s` } as CSSProperties}
+                style={{ "--box-index": index, "--box-delay": `${index * 0.72}s` } as CSSProperties}
               />
             ))}
           </div>
