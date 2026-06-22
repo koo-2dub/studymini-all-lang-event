@@ -4,10 +4,17 @@ import type { CSSProperties } from "react";
 import Image from "next/image";
 
 const conveyorBoxes = [
-  { left: "50%", delay: "0s", rotate: "-3deg" },
-  { left: "50%", delay: "0.9s", rotate: "2deg" },
-  { left: "50%", delay: "1.8s", rotate: "-1deg" },
-  { left: "50%", delay: "2.7s", rotate: "3deg" },
+  { src: "/assets/all-language/en-box.png", delay: "0s", rotate: "-3deg", width: 290, height: 320 },
+  { src: "/assets/all-language/jp-box.png", delay: "6s", rotate: "2deg", width: 288, height: 348 },
+  { src: "/assets/all-language/de-box.png", delay: "12s", rotate: "-1deg", width: 323, height: 348 },
+  { src: "/assets/all-language/fr-box.png", delay: "18s", rotate: "3deg", width: 263, height: 346 },
+  { src: "/assets/all-language/es-box.png", delay: "24s", rotate: "-2deg", width: 254, height: 326 },
+  { src: "/assets/all-language/ru-box.png", delay: "30s", rotate: "2deg", width: 276, height: 310 },
+  { src: "/assets/all-language/vn-box.png", delay: "36s", rotate: "-3deg", width: 312, height: 337 },
+  { src: "/assets/all-language/ar-box.png", delay: "42s", rotate: "1deg", width: 341, height: 358 },
+  { src: "/assets/all-language/po-box.png", delay: "48s", rotate: "-1deg", width: 333, height: 341 },
+  { src: "/assets/all-language/ch-box.png", delay: "54s", rotate: "3deg", width: 253, height: 321 },
+  { src: "/assets/all-language/in-box.png", delay: "60s", rotate: "-2deg", width: 260, height: 300 },
 ];
 
 export default function SectionCollectionStage() {
@@ -16,15 +23,15 @@ export default function SectionCollectionStage() {
       <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
         {conveyorBoxes.map((box, index) => (
           <Image
-            key={`minibox-${index}`}
-            src="/assets/all-language/minibox.png"
-            alt="미니학습지 미니 박스"
-            width={655}
-            height={1477}
+            key={`language-box-${index}`}
+            src={box.src}
+            alt=""
+            aria-hidden="true"
+            width={box.width}
+            height={box.height}
             className="section-collection-box absolute h-auto max-w-none"
             style={
               {
-                "--box-left": box.left,
                 "--box-delay": box.delay,
                 "--box-rotate": box.rotate,
               } as CSSProperties
