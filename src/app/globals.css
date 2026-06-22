@@ -524,6 +524,20 @@ body {
   margin-top: clamp(25px, 2.2vw, 36px);
 }
 
+.section-language-library-highlight {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+
+.section-language-library-highlight.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .section-language-library-emphasis {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);

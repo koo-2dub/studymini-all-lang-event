@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Section7Highlight from "./Section7Highlight";
 
 export default function Section7() {
   return (
@@ -38,7 +39,7 @@ export default function Section7() {
             </p>
 
             <p>
-              오사카의 봄, 베를린의 서점, 하노이 골목의 커피.
+              <Section7Highlight />
               <br />
               우리가 좋아한 세계에는 언제나 언어가 있었습니다.
             </p>
