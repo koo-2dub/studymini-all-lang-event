@@ -3,34 +3,31 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 
-const collectionBoxes = [
-  { src: "indonesia-box.png", alt: "인도네시아어 미니학습지 박스", className: "section-collection-box-id" },
-  { src: "russia-box.png", alt: "러시아어 미니학습지 박스", className: "section-collection-box-ru" },
-  { src: "ch-box.png", alt: "중국어 미니학습지 박스", className: "section-collection-box-ch" },
-  { src: "de-box.png", alt: "독일어 미니학습지 박스", className: "section-collection-box-de" },
-  { src: "jp-box.png", alt: "일본어 미니학습지 박스", className: "section-collection-box-jp" },
-  { src: "vn-box.png", alt: "베트남어 미니학습지 박스", className: "section-collection-box-vn" },
-  { src: "en-box.png", alt: "영어 미니학습지 박스", className: "section-collection-box-en" },
-  { src: "fr-box.png", alt: "프랑스어 미니학습지 박스", className: "section-collection-box-fr" },
-  { src: "ar-box.png", alt: "아랍어 미니학습지 박스", className: "section-collection-box-ar" },
-  { src: "es-box.png", alt: "스페인어 미니학습지 박스", className: "section-collection-box-es" },
-  { src: "it-box.png", alt: "이탈리아어 미니학습지 박스", className: "section-collection-box-it" },
-  { src: "portugal-box.png", alt: "포르투갈어 미니학습지 박스", className: "section-collection-box-pt" },
+const conveyorBoxes = [
+  { left: "37%", delay: "0s", rotate: "-7deg" },
+  { left: "49%", delay: "0.9s", rotate: "5deg" },
+  { left: "42%", delay: "1.8s", rotate: "-2deg" },
 ];
 
 export default function SectionCollectionStage() {
   return (
     <div className="section-collection-stage relative mx-auto h-[760px] w-full max-w-[900px]">
       <div className="section-collection-boxes absolute inset-x-0 top-0 z-10 mx-auto h-[590px] w-full">
-        {collectionBoxes.map((box, index) => (
+        {conveyorBoxes.map((box, index) => (
           <Image
-            key={box.src}
-            src={`/assets/all-language/${box.src}`}
-            alt={box.alt}
-            width={340}
-            height={358}
-            className={`section-collection-box absolute h-auto max-w-none ${box.className}`}
-            style={{ "--box-index": index } as CSSProperties}
+            key={`minibox-${index}`}
+            src="/assets/all-language/minibox.png"
+            alt="미니학습지 미니 박스"
+            width={220}
+            height={232}
+            className="section-collection-box absolute h-auto max-w-none"
+            style={
+              {
+                "--box-left": box.left,
+                "--box-delay": box.delay,
+                "--box-rotate": box.rotate,
+              } as CSSProperties
+            }
           />
         ))}
       </div>
