@@ -191,12 +191,12 @@ body {
   aspect-ratio: 900 / 760;
   height: auto;
   margin-top: 70px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .section-collection-boxes {
-  height: 77.63%;
-  overflow: visible;
+  height: 100%;
+  overflow: hidden;
 }
 
 .section-collection-stage::before {
@@ -214,11 +214,12 @@ body {
 
 .section-collection-box {
   left: var(--box-left);
-  top: -3%;
+  top: 0;
   z-index: 12;
-  width: min(23.33%, 210px);
+  width: 655px;
+  max-width: 72vw;
   opacity: 0;
-  transform: translateY(-160px) rotate(var(--box-rotate));
+  transform: translateX(-50%) translateY(-1180px) rotate(var(--box-rotate));
   animation: collection-box-conveyor 3.6s linear var(--box-delay) infinite both;
   will-change: transform, opacity;
 }
@@ -330,26 +331,26 @@ body {
 @keyframes collection-box-conveyor {
   0% {
     opacity: 0;
-    transform: translateY(-160px) rotate(var(--box-rotate));
+    transform: translateX(-50%) translateY(-1180px) rotate(var(--box-rotate));
   }
 
-  10% {
+  4% {
     opacity: 1;
   }
 
-  72% {
+  20% {
     opacity: 1;
-    transform: translateY(400px) rotate(var(--box-rotate));
+    transform: translateX(-50%) translateY(-420px) rotate(var(--box-rotate));
   }
 
-  88% {
+  25% {
     opacity: 0;
-    transform: translateY(510px) rotate(var(--box-rotate));
+    transform: translateX(-50%) translateY(-300px) rotate(var(--box-rotate));
   }
 
   100% {
     opacity: 0;
-    transform: translateY(510px) rotate(var(--box-rotate));
+    transform: translateX(-50%) translateY(-300px) rotate(var(--box-rotate));
   }
 }
 

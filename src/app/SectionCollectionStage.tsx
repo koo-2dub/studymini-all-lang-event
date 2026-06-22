@@ -4,9 +4,10 @@ import type { CSSProperties } from "react";
 import Image from "next/image";
 
 const conveyorBoxes = [
-  { left: "37%", delay: "0s", rotate: "-7deg" },
-  { left: "49%", delay: "0.9s", rotate: "5deg" },
-  { left: "42%", delay: "1.8s", rotate: "-2deg" },
+  { left: "50%", delay: "0s", rotate: "-3deg" },
+  { left: "50%", delay: "0.9s", rotate: "2deg" },
+  { left: "50%", delay: "1.8s", rotate: "-1deg" },
+  { left: "50%", delay: "2.7s", rotate: "3deg" },
 ];
 
 export default function SectionCollectionStage() {
@@ -18,8 +19,8 @@ export default function SectionCollectionStage() {
             key={`minibox-${index}`}
             src="/assets/all-language/minibox.png"
             alt="미니학습지 미니 박스"
-            width={220}
-            height={232}
+            width={655}
+            height={1477}
             className="section-collection-box absolute h-auto max-w-none"
             style={
               {
