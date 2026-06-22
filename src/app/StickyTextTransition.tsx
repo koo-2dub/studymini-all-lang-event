@@ -56,23 +56,25 @@ export default function StickyTextTransition() {
   return (
     <section ref={sectionRef} className="section-static-copy" aria-label="12개의 언어에서 12개의 세계로 전환">
       <div className="section-static-copy-sticky">
-        <div className="section-static-copy-text">
-          <span className="section-static-copy-number">12개</span>
-          <span className="section-static-copy-word-wrap" aria-live="polite">
-            <span
-              className="section-static-copy-word section-static-copy-word-language"
-              style={{ opacity: languageOpacity, transform: `translateY(${languageOffset}px)` }}
-            >
-              의 언어
+        <div className="section-static-copy-screen">
+          <div className="section-static-copy-text">
+            <span className="section-static-copy-number">12개</span>
+            <span className="section-static-copy-word-wrap" aria-live="polite">
+              <span
+                className="section-static-copy-word section-static-copy-word-language"
+                style={{ opacity: languageOpacity, transform: `translateY(${languageOffset}px)` }}
+              >
+                의 언어
+              </span>
+              <span
+                className="section-static-copy-word section-static-copy-word-world"
+                style={{ opacity: worldOpacity, transform: `translateY(${worldOffset}px)` }}
+                aria-hidden={worldOpacity === 0}
+              >
+                의 세계
+              </span>
             </span>
-            <span
-              className="section-static-copy-word section-static-copy-word-world"
-              style={{ opacity: worldOpacity, transform: `translateY(${worldOffset}px)` }}
-              aria-hidden={worldOpacity === 0}
-            >
-              의 세계
-            </span>
-          </span>
+          </div>
         </div>
       </div>
     </section>

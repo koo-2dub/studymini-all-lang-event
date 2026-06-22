@@ -234,7 +234,7 @@ body {
 
 .section-static-copy {
   position: relative;
-  height: 200vh;
+  height: calc(100vh + 1024px);
   background: #000;
 }
 
@@ -244,12 +244,22 @@ body {
   display: flex;
   width: 100%;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.section-static-copy-screen {
+  display: flex;
+  width: 100%;
+  height: 1024px;
   padding: 0 70px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: #000;
+  flex: 0 0 auto;
 }
 
 .section-static-copy-text {
@@ -303,7 +313,12 @@ body {
 }
 
 @media (max-width: 640px) {
-  .section-static-copy-sticky {
+  .section-static-copy {
+    height: calc(100vh + 688px);
+  }
+
+  .section-static-copy-screen {
+    height: 688px;
     padding: 0 34.18px;
     gap: 4.883px;
   }
