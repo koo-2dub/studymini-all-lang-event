@@ -220,7 +220,7 @@ body {
   max-width: 72vw;
   opacity: 0;
   transform: translateX(-50%) translateY(-1180px) rotate(var(--box-rotate));
-  animation: collection-box-conveyor 3.6s linear var(--box-delay) infinite both;
+  animation: collection-box-conveyor 6.4s linear var(--box-delay) infinite both;
   will-change: transform, opacity;
 }
 
