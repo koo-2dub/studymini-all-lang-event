@@ -5,16 +5,16 @@ import Image from "next/image";
 
 const conveyorBoxes = [
   { src: "/assets/all-language/en-box.png", delay: "0s", rotate: "-3deg", width: 290, height: 320 },
-  { src: "/assets/all-language/jp-box.png", delay: "6s", rotate: "2deg", width: 288, height: 348 },
-  { src: "/assets/all-language/de-box.png", delay: "12s", rotate: "-1deg", width: 323, height: 348 },
-  { src: "/assets/all-language/fr-box.png", delay: "18s", rotate: "3deg", width: 263, height: 346 },
-  { src: "/assets/all-language/es-box.png", delay: "24s", rotate: "-2deg", width: 254, height: 326 },
-  { src: "/assets/all-language/ru-box.png", delay: "30s", rotate: "2deg", width: 276, height: 310 },
-  { src: "/assets/all-language/vn-box.png", delay: "36s", rotate: "-3deg", width: 312, height: 337 },
-  { src: "/assets/all-language/ar-box.png", delay: "42s", rotate: "1deg", width: 341, height: 358 },
-  { src: "/assets/all-language/po-box.png", delay: "48s", rotate: "-1deg", width: 333, height: 341 },
-  { src: "/assets/all-language/ch-box.png", delay: "54s", rotate: "3deg", width: 253, height: 321 },
-  { src: "/assets/all-language/in-box.png", delay: "60s", rotate: "-2deg", width: 260, height: 300 },
+  { src: "/assets/all-language/jp-box.png", delay: "2.5s", rotate: "2deg", width: 288, height: 348 },
+  { src: "/assets/all-language/de-box.png", delay: "5s", rotate: "-1deg", width: 323, height: 348 },
+  { src: "/assets/all-language/fr-box.png", delay: "7.5s", rotate: "3deg", width: 263, height: 346 },
+  { src: "/assets/all-language/es-box.png", delay: "10s", rotate: "-2deg", width: 254, height: 326 },
+  { src: "/assets/all-language/ru-box.png", delay: "12.5s", rotate: "2deg", width: 276, height: 310 },
+  { src: "/assets/all-language/vn-box.png", delay: "15s", rotate: "-3deg", width: 312, height: 337 },
+  { src: "/assets/all-language/ar-box.png", delay: "17.5s", rotate: "1deg", width: 341, height: 358 },
+  { src: "/assets/all-language/po-box.png", delay: "20s", rotate: "-1deg", width: 333, height: 341 },
+  { src: "/assets/all-language/ch-box.png", delay: "22.5s", rotate: "3deg", width: 253, height: 321 },
+  { src: "/assets/all-language/in-box.png", delay: "25s", rotate: "-2deg", width: 260, height: 300 },
 ];
 
 export default function SectionCollectionStage() {

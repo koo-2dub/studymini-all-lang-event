@@ -220,7 +220,7 @@ body {
   max-width: 42vw;
   opacity: 0;
   transform: translateX(-50%) translateY(-360px) rotate(var(--box-rotate));
-  animation: collection-box-conveyor 66s linear var(--box-delay) infinite both;
+  animation: collection-box-conveyor 27.5s linear var(--box-delay) infinite both;
   will-change: transform, opacity;
 }
 
@@ -400,12 +400,12 @@ body {
     opacity: 1;
   }
 
-  9.1% {
+  11.75% {
     opacity: 1;
     transform: translateX(-50%) translateY(410px) rotate(var(--box-rotate));
   }
 
-  9.85% {
+  12.73% {
     opacity: 0;
     transform: translateX(-50%) translateY(455px) rotate(var(--box-rotate));
   }
